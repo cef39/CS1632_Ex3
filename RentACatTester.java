@@ -45,8 +45,9 @@ public class RentACatTester{
 		assertEquals(false,result);
 
 	}
-	//testing if rentCat returns false if cat is null
 
+	//testing if rentCat returns false if cat is null
+	@Test
 	public void rentCatTest2(){
 		boolean result = _r.rentCat(null);
 		assertEquals(false,result);
@@ -85,6 +86,20 @@ public class RentACatTester{
 		boolean result = _r.catExists(1, catList);
 
 		assertEquals(false, result);
+	}
+
+	//test that checks if there is only 1 cat in the list and it is not available for rent.
+	//Should return empty string.
+	@Test
+	public void catListTest(){
+		ArrayList<Cat> catList = new ArrayList<Cat>();
+
+		Cat c1 = Mockito.mock(Cat.class);
+		catList.add(c1);
+
+		Mockito.when(c1.getRented()).thenReturn(true);
+		String result = _r.listCats(catList);
+		assertEquals("",result);
 	}
 
 }
