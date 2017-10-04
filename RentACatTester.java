@@ -13,7 +13,15 @@ public class RentACatTester{
 
 	@Test
 	public void returnCatTest(){
-		
+
+	}
+
+	@Test
+	/* A test to see if rentCat() would return false
+		given a cat that is already rented. */
+	public void rentCatTest(){
+
+
 	}
 
 }
