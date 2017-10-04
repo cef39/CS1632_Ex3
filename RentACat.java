@@ -20,7 +20,7 @@ public class RentACat {
 			if (c == null)
 				return false;
 
-			if(c.getRented() == false) 
+			if(c.getRented() == false)
 				return false;
 
 			c.returnCat();
@@ -43,7 +43,7 @@ public class RentACat {
 			if (c == null)
 				return false;
 
-			if(c.getRented() == true) 
+			if(c.getRented() == true)
 				return false;
 
 			c.rentCat();
@@ -73,7 +73,7 @@ public class RentACat {
 				}
 			}
 
-	return list;
+			return list;
 		}
 
 		/**
@@ -87,6 +87,10 @@ public class RentACat {
 		 */
 
 		public boolean catExists(int id, ArrayList<Cat> catList) {
+			if(catList == null || catList.size() == 0 || id > catList.size() || id < 0) return false;
+
+
+
 	// TODO
 	return false;
 		}
