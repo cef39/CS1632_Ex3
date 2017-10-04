@@ -1,4 +1,4 @@
-import org.junit.Test;
+import org.junit.*;
 import static org.junit.Assert.*;
 
 import org.mockito.*;
@@ -13,14 +13,10 @@ public class RentACatTester{
 
 	@Test
 	public void returnCatTest(){
+		Cat c = Mockito.mock(Cat.class);
+		boolean result = _r.returnCat(c);
 
-	}
-
-	@Test
-	/* A test to see if rentCat() would return false
-		given a cat that is already rented. */
-	public void rentCatTest(){
-
+		assertEquals(true, result);
 
 	}
 
