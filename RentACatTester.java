@@ -33,7 +33,13 @@ public class RentACatTester{
 		Mockito.when(c.getRented()).thenReturn(true);
 		boolean result = _r.rentCat(c);
 		assertEquals(false,result);
-		
+
+	}
+	//testing if rentCat returns false if cat is null
+
+	public void rentCatTest2(){
+		boolean result = _r.rentCat(null);
+		assertEquals(false,result);
 	}
 
 	// testing whether catExists() returns true when id is found
