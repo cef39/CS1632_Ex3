@@ -11,12 +11,19 @@ public class RentACatTester{
 		_r = new RentACat();
 	}
 
+	// testing that a cat can be returned
 	@Test
 	public void returnCatTest(){
+		// create double of Cat class
 		Cat c = Mockito.mock(Cat.class);
+
+		// stub out c.getRented() method
+		Mockito.when(c.getRented()).thenReturn(true);
+
 		boolean result = _r.returnCat(c);
 
 		assertEquals(true, result);
+
 
 	}
 
