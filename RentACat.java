@@ -17,7 +17,12 @@ public class RentACat {
 		 */
 
 		public boolean returnCat(Cat c) {
-			if(c.getRented() == false) return false;
+			if (c == null)
+				return false;
+
+			if(c.getRented() == false) 
+				return false;
+
 			c.returnCat();
 			return true;
 		}
@@ -35,7 +40,12 @@ public class RentACat {
 
 
 		public boolean rentCat(Cat c) {
-			if(c.getRented() == true) return false;
+			if (c == null)
+				return false;
+
+			if(c.getRented() == true) 
+				return false;
+
 			c.rentCat();
 			return true;
 		}
