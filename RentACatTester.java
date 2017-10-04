@@ -77,4 +77,14 @@ public class RentACatTester{
 		assertEquals(true, result);
 	}
 
+	// test that sending an empty arraylist returns false
+	@Test
+	public void catExistsTest2(){
+		ArrayList<Cat> catList = new ArrayList<Cat>();
+
+		boolean result = _r.catExists(1, catList);
+
+		assertEquals(false, result);
+	}
+
 }
