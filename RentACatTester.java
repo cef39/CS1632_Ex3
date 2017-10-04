@@ -19,12 +19,19 @@ public class RentACatTester{
 
 		// stub out c.getRented() method
 		Mockito.when(c.getRented()).thenReturn(true);
-
 		boolean result = _r.returnCat(c);
-
 		assertEquals(true, result);
-
-
 	}
-	
+
+	// testing if rentCat returns false if cat is rented.
+	@Test
+	public void rentCatTest(){
+		Cat c = Mockito.mock(Cat.class);
+
+		Mockito.when(c.getRented()).thenReturn(true);
+		boolean result = _r.rentCat(c);
+		assertEquals(false,result);
+		
+	}
+
 }
