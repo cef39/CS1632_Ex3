@@ -15,7 +15,7 @@ public class RentACatTester{
 
 	// testing that a cat can be returned
 	@Test
-	public void returnCatTest(){
+	public void returnCatTest1(){
 		// create double of Cat class
 		Cat c = Mockito.mock(Cat.class);
 
@@ -23,6 +23,16 @@ public class RentACatTester{
 		Mockito.when(c.getRented()).thenReturn(true);
 		boolean result = _r.returnCat(c);
 		assertEquals(true, result);
+	}
+
+	// Testing that a cat can be rejected if it hasn't been rented out
+	@Test
+	public void returnCatTest2(){
+		Cat c = Mockito.mock(Cat.class);
+
+		Mockito.when(c.getRented()).thenReturn(false);
+		boolean result = _r.returnCat(c);
+		assertEquals(false, result);
 	}
 
 	// testing if rentCat returns false if cat is rented.
