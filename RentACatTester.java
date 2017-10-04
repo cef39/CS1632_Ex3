@@ -1,4 +1,4 @@
-import org.junit.Test;
+import org.junit.*;
 import static org.junit.Assert.*;
 
 import org.mockito.*;
@@ -13,7 +13,11 @@ public class RentACatTester{
 
 	@Test
 	public void returnCatTest(){
-		
+		Cat c = Mockito.mock(Cat.class);
+		boolean result = _r.returnCat(c);
+
+		assertEquals(true, result);
+
 	}
 
 }

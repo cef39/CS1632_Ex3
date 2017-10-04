@@ -73,7 +73,7 @@ public class RentACat {
 				}
 			}
 
-	return list;
+			return list;
 		}
 
 		/**
@@ -87,8 +87,18 @@ public class RentACat {
 		 */
 
 		public boolean catExists(int id, ArrayList<Cat> catList) {
-	// TODO
-	return false;
+			if (catList == null || catList.size() == 0)
+				return false;
+
+			// iterate throughout arraylist, checking against each id
+			// if correct id is found, return true
+			for (int i = 0; i < catList.size(); i++){
+				if (catList.get(i).getId() == id)
+					return true;
+			}
+
+
+			return false;
 		}
 
 		/**
