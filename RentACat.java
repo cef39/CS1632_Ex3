@@ -20,7 +20,7 @@ public class RentACat {
 			if (c == null)
 				return false;
 
-			if(c.getRented() == false) 
+			if(c.getRented() == false)
 				return false;
 
 			c.returnCat();
@@ -43,7 +43,7 @@ public class RentACat {
 			if (c == null)
 				return false;
 
-			if(c.getRented() == true) 
+			if(c.getRented() == true)
 				return false;
 
 			c.rentCat();
@@ -239,6 +239,7 @@ public class RentACat {
 					}
 			} catch (Exception nfex) {
 					System.err.println("Invalid cat ID.");
+					sc.next();
 			}
 				}
 
